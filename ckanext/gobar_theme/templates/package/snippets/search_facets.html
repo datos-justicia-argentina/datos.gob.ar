@@ -1,8 +1,8 @@
 {% with items = h.get_facet_items_dict(name) %}
-    <div class="search-filter invisible">
-        <h2 class="filter-title">{{ title }}</h2>
+    <div class="search-filter invisible" style="color:#000000">
+        <h2 class="filter-title" style="color:#000000">{{ title }}</h2>
         {% if items %}
-            <ul class="filter-values">
+            <ul class="filter-values" style="color:#000000">
                 {% for item in items %}
                     {% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
                     {% set count = count_label(item['count']) if count_label else ('(%d)' % item['count']) %}

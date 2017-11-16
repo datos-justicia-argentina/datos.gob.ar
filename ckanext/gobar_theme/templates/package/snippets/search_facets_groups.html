@@ -1,8 +1,8 @@
 {% with items = h.get_faceted_groups() %}
-    <div class="search-filter invisible">
+    <div class="search-filter invisible" style="color:#000000">
         <h2 class="filter-title">{{ title }}</h2>
 
-        <div class="group-images">
+        <div class="group-images" style="color:#000000">
             {%- for item in items -%}
                 {%- set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.facet_active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) -%}
                 {%- set count = count_label(item['facet_count']) if count_label else ('(%d)' % item['facet_count']) -%}

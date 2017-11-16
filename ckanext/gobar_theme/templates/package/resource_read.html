@@ -125,6 +125,13 @@
                     </div>
                 </div>
             </div>
+			<div class="resource-additional-info col-xs-12 col-md-4 {{ '' if has_more_resources else 'col-md-offset-8' }}">
+               
+				{% block resource_license %}
+				{% snippet "snippets/social.html" %}
+				{% endblock %}
+            </div>
         </div>
     </div>
+	
 {% endblock %}

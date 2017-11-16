@@ -82,7 +82,8 @@ div.svg-tooltip {
     padding: 20px 0; }
     @media (min-width: 768px) {
       #footer #footer-spacer {
-        padding: 50px 0; } }
+		color: #005d7a;
+        padding: 20px 0; } }
     #footer #footer-spacer .footer-section {
       color: #0072bc;
       font-size: 14px;
@@ -90,7 +91,8 @@ div.svg-tooltip {
       text-align: center; }
       #footer #footer-spacer .footer-section.logo img {
         max-width: 300px;
-        margin-bottom: 20px; }
+		max-height: 300px;
+        margin-bottom: 10px; }
       #footer #footer-spacer .footer-section.links-externos i {
         font-size: 28px;
         margin-left: 20px; }
@@ -2163,4 +2165,243 @@ ul.activity {
   ul.activity li.load-more {
     display: none !important; }
 
+/* FOOTER */
+
+#footer #footer-spacer .footer-section.logo img {
+  max-width: 100%;
+}
+
+
+.site-footer {
+  background: #0072bc;
+}
+
+#footer {
+  box-shadow: none;
+}
+
+
+#footer #footer-spacer .footer-section.links-externos i {
+    font-size: 28px;
+    margin: 0 20px 0 0;
+
+}
+
+#footer #footer-spacer .footer-section.links-externos {
+  text-align: left;
+}
+
+/* HOME */
+
+@media (max-width: 768px) {
+  .featured-groups .group-container {
+    max-width: 400px;
+  }
+}
+
+#contenido-home-container {
+  background-color: #f5f5f5
+}
+#contenido-home {
+  margin-bottom: 70px;
+}
+.featured-graph {
+  padding: 1em;
+  background: white;
+}
+.featured-graph h4 {
+  color:black;
+  font-weight: normal;
+}
+.featured-graph img {
+  width: 100%;
+}
+.featured-graph-source {
+
+}
+
+#justicia2020 {
+  background: white;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#justicia2020 h2 {
+  color:#01aef0;
+}
+
+#justicia2020 h4 {
+  color: #767676;
+  font-size: 1.5em;
+}
+
+#home-video .lead,
+#novedades .lead,
+#justicia2020 .lead {
+  color: #767676;
+}
+
+#justicia2020 .equipo-de-trabajo {
+  background-color: #e6e6e6;
+  color: #ff9d5b;
+  padding: 0 1% 2% 1%;
+  margin: 2% 0 2% 6%;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  #justicia2020 .equipo-de-trabajo {
+    margin: 0;
+  }
+}
+
+#justicia2020 .equipo-de-trabajo h2 {
+  color:#ff9d5b;
+}
+
+#justicia2020 .equipo-de-trabajo .btn-danger {
+  background-color: #ff9d5b;
+  border-color: #ee5d0b;
+  text-shadow: 1px 1px 3px black;
+  white-space: normal;
+}
+
+#justicia2020 .registracion-gratuita {
+  font-size: 0.8em;
+  /* offset-x | offset-y | blur-radius | color */
+}
+
+#novedades {
+  margin-top: 2em;
+}
+
+#home-video h3,
+#justicia2020 h2,
+#novedades h3 {
+  color:#70B7E7;
+}
+
+#novedades ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#novedades li {
+  padding: 1em 0;
+  border-bottom: 1px solid #ccc;
+}
+
+#novedades li:last-child {
+    border-bottom: none;
+}
+
+#novedades li a {
+  font-size: 1.5em;
+  color: #70B7E7;
+}
+
+#novedades li p {
+  color: #666;
+}
+
+#ej-dataset .panel-heading,
+#novedades .panel-heading {
+  background-color: #70B7E7;
+}
+
+.novedades-container,
+#novedades .estadisticas-judiciales {
+  background: white;
+}
+
+@media (min-width: 1024px) {
+  .col-md-6.novedades-container {
+    width: 49%;
+    margin-right: 1%;
+  }
+
+  .col-md-6.estadisticas-judiciales {
+    width: 49%;
+    margin-left: 1%;
+  }
+}
+
+#novedades .estadisticas-judiciales img {
+  float: right;
+  max-width: 40%;
+  max-height: 362px;
+}
+
+#home-video {
+  background: white;
+  margin-top: 2em;
+}
+
+
+.novedades-container,
+.estadisticas-judiciales {
+  height: 371px;
+}
+
+@media (max-width: 1000px) {
+  .novedades-container {
+    height: auto;
+    padding-top: 1em;
+  }
+  .estadisticas-judiciales {
+    height: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 1em;
+  }
+  #novedades .estadisticas-judiciales img {
+    max-height: 180px;
+  }
+
+}
+
+
+@media (min-width: 1700px) {
+  .estadisticas-judiciales,
+  .novedades-container .panel {
+    height: 370px;
+  }
+}
+
+
+
+/* Estadisticas judiciales */
+#static-nav-bar .nav-section a#nav-estadistica-link.nav-button .nav-button-border {
+    border-left: solid 1px #D1D3D4;
+}
+
+
+.ej-img-button {
+  max-width: 50%;
+  float: left;
+  margin-right: 2em;
+  border-radius: 1em;
+  box-shadow: 5px 5px 10px #AAA;
+  border: 2px solid #7BE;
+  max-height: 405px;
+}
+
+#ej-dataset h2 a {
+  color:white;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #ej-protocolo {
+    padding-top: 2em;
+    clear: left;
+  }
+}
+
+#ej-datos {
+  margin-top: 2em;
+  border-top: 2px sold #eee;
+  padding-top: 2em;
+}
 /*# sourceMappingURL=gobar_style.css.map */

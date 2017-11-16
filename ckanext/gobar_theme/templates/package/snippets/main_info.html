@@ -2,6 +2,7 @@
     <div id="pkg-title-and-desc">
         {% if h.check_access('package_update', {'id':pkg.id }) %}
             {% link_for _('Edit'), controller='package', action='edit', id=pkg.name, class_='btn btn-primary edit-button', icon='wrench' %}
+            {% link_for 'Agregar grupos', id=pkg.name, controller='package', action='groups', class_='btn btn-primary', icon='plus-sign-alt' %}
         {% endif %}
         <h1 class="pkg-title">{{ pkg.title }}</h1>
 

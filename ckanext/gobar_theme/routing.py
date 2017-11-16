@@ -33,6 +33,7 @@ class GobArRouter:
         self.home_routes.connect('gobar_open_data', '/datos-abiertos', action='open_data')
         self.home_routes.connect('gobar_legal', '/marco-legal', action='legal')
         self.home_routes.connect('gobar_platform', '/plataforma', action='platform')
+        self.home_routes.connect('gobar_estadistica', '/estadistica_judicial', action='estadistica')
         self.redirect(
             ('/about', '/datos-abiertos')
         )
@@ -42,7 +43,6 @@ class GobArRouter:
         self.redirect(
             ('/dataset/history/{id:.*?}', '/dataset/{id}'),
             ('/dataset/activity/{id:.*?}', '/dataset/{id}'),
-            ('/dataset/groups/{id:.*?}', '/dataset/{id}'),
             ('/dataset/followers/{id:.*?}', '/dataset/{id}'),
             ('/dataset/{id}/resource/{resource_id}', '/dataset/{id}/archivo/{resource_id}')
         )
@@ -92,7 +92,7 @@ class GobArRouter:
         )
 
     def connect_users(self):
-        self.route_map.connect('login', '/635511788', action='login', controller='user')
+        self.route_map.connect('login', '/193819391969', action='login', controller='user')
         self.route_map.connect('/logout', action='logout', controller='user')
         self.redirect(
             ('/user/login', '/'),

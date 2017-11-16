@@ -1,7 +1,7 @@
-<div id="pkg-secondary-info" class="col-xs-12 col-md-4">
+<div id="pkg-secondary-info" class="col-xs-12 col-md-4" style="color:#000000">
     <h2 class="secondary-info-title">Información adicional</h2>
 
-    <div id="info-container">
+    <div id="info-container" style="color:#000000">
 
         {% if pkg.maintainer|length > 0 %}
             <div class="row">
@@ -110,7 +110,11 @@
                 {% endif %}
             {% endfor %}
         {% endif %}
-
+		
+		{% block resource_license %}
+		{% snippet "snippets/social.html" %}
+		{% endblock %}
+		
     </div>
 
     <div id="pkg-recent-activity">

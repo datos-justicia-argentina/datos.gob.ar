@@ -59,6 +59,9 @@ class GobArHomeController(HomeController):
     def platform(self):
         return base.render('static/platform.html')
 
+    def estadistica(self):
+        return base.render('static/estadistica_judicial.html')
+
 
 class GobArApiController(ApiController):
 

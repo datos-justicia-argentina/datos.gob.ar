@@ -1,16 +1,17 @@
-{% set stats = h.get_site_statistics() %}
+﻿{% set stats = h.get_site_statistics() %}
 
 <div id="title" class="container-fluid">
     {% snippet "title_background.html" %}
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        <div id="title-container" class="col-xs-12 col-md-6">
-            <h1>Datos Argentina</h1>
+        <div id="title-container" class="col-xs-12 col-md-6" style="margin-bottom:20px">
+            <h1><span>Portal de Datos</span> Abiertos de la Justicia Argentina </h1>
 
-            <p class="description">Portal de datos abiertos del Gobierno de la República Argentina.
-                Acá encontrarás información pública, herramientas y recursos para desarrollar aplicaciones y
-                visualizaciones y crear historias con datos.</p>
+            <p class="description">Recursos libres y reutilizables acerca del sistema de justicia de la República Argentina.</p>
         </div>
-        <div id="searcher" class="col-xs-8 col-xs-offset-2 col-md-5 col-md-offset-0 col-lg-4 no-padding">
+		<div id="title-container" class="col-xs-12 col-md-6">
+		&nbsp;
+		</div>
+        <div id="searcher" class="col-xs-8 col-xs-offset-2 col-md-5 col-md-offset-0 col-lg-4 no-padding" style="margin-top:10px">
             <form class="module-content search-form" method="get"
                   action="{% url_for controller='package', action='search' %}">
                 <input type="text" class="search" name="q" value="" autocomplete="off"
@@ -27,7 +28,7 @@
                 <p class="stats-legend datasets">DATASETS</p>
             </div>
             <div class="col-sm-4 col-md-12">
-                <p class="stat organizations">{{ "%03d" % stats.organization_count }}</p>
+                <p class="stat organizations">{{ "%03d" % h.organizations_with_packages() }}</p>
 
                 <p class="stats-legend">ORGANIZACIONES</p>
             </div>
