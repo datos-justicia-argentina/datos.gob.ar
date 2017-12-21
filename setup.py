@@ -81,6 +81,8 @@ setup(
         gobar_theme=ckanext.gobar_theme.plugin:Gobar_ThemePlugin
         [babel.extractors]
         ckan = ckan.lib.extract:extract_ckan
+	[paste.paster_command]
+	clean_datastore = ckanext.gobar_theme.commands:AdminCommand
     ''',
 
     # If you are changing from the default layout of your extension, you may
