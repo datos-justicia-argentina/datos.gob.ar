@@ -4,5 +4,5 @@
     {% snippet "home/title.html" %}
     {% snippet "home/create_buttons.html" %}
     {% snippet "home/groups.html" %}
-    {% snippet "home/contenido_home.html" %}
+    {{ h.get_page_html("inicio")|safe }}
 {% endblock %}
