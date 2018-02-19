@@ -86,6 +86,9 @@ class AdminCommand(ckan.lib.cli.CkanCommand):
                 delete_error_count += 1
                 logger.exception("Unable to drop resource: '%s'",
                                  resource_id, exc_info=e)
+	    except Exception as e:
+		print "Error %s" % e
+		logger.exception("Error: %s",e)
 
         print "Deleted content of %s tables" % delete_count
         print "Deletion failed for %s tables" % delete_error_count
